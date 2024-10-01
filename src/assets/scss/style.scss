@@ -4,16 +4,9 @@
 @import "/src/assets/scss/components/header";
 @import "/src/assets/scss/components/product";
 @import "/src/assets/scss/components/footer";
-
-
-
-.flex {
-    display: flex;
-}
-
-.justify-center {
-    justify-content: center;
-}
+@import "/src/assets/scss/components/cgvView";
+@import "/src/assets/scss/utils";
+@import "/src/assets/scss/components/banner";
 
 .main-title {
   font-family: 'abril-fatface';
@@ -134,19 +127,3 @@
     padding: 16px;
     background-color: $white-smoke;
 }
-
-/* BANNER */
-.banner {
-    font-family: 'abril-fatface';
-    background-color: $air-force-blue;
-    color: $white;
-    font-size: 40px;
-    line-height: 53.96px;
-    font-weight: 400;
-    width: 100%;
-    padding: 16px 32px;
-    text-align: center;
-}
-
-
-

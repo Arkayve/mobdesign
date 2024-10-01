@@ -28,7 +28,12 @@
     height: 54px;
     line-height: 53.96px;
     color: $black;
-    z-index: 2;    
+    z-index: 2; 
+}
+
+.header__topTitle a {
+    text-decoration: none;
+    color: $black;
 }
 
 .header__topTitle span {

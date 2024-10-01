@@ -9,14 +9,14 @@
   <header class="header"> 
     <div class="header__container">
       <div class="header__top">
-        <h1 class="header__topTitle">Mob<span>D</span>esign</h1>
+        <h1 class="header__topTitle"><a href="#accueil">Mob<span>D</span>esign</a></h1>
         <button id="header__burger" class="header__burger" aria-label="Ouvrir le menu"></button>
         <nav id="header__menu" class="header__menu">
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Canapés</a></li>
-            <li><a href="#">Décoration</a></li>
-            <li><a href="#">Mes coups de coeur</a></li>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#canapes">Canapés</a></li>
+            <li><a href="#decoration">Décoration</a></li>
+            <li><a href="#mes-coups-de-coeur">Mes coups de coeur</a></li>
           </ul>
         </nav>
     </div>
@@ -28,7 +28,6 @@
   <body>
     <section id="banner" class="banner"></section>
     <main id="main"></main>
-    <section id="product-list"></section>
     <script type="module" src="/src/main.js"></script>
   </body>
   <footer class="footer">
@@ -60,6 +59,7 @@
   </footer>
 </html>
 
+<!-- PRODUCT TEMPLATE -->
 <template id="productTemplate">
     <div class="product">
         <div class="flex justify-center">
@@ -75,4 +75,18 @@
           <button class="product__button js-product__button"></button>
         </div>       
     </div>
+</template>
+
+<!-- CGV TEMPLATE -->
+<template id="cgvTemplate">
+  <div class="cgv__container">
+    <h3 class="cgv__title js-cgv__title1"></h3>
+    <p class="cgv__description js-cgv__description1"></p>
+    <h3 class="cgv__title js-cgv__title2"></h3>
+    <p class="cgv__description js-cgv__description2"></p>
+  </div>
+  <section class="banner js-banner"></section>
+  <div class="cgv__container">
+    <p class="cgv__description js-cgv__description3"></p>
+  </div>
 </template>
