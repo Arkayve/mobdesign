@@ -1,0 +1,42 @@
+/* FOOTER */
+.footer {
+    background-color: $air-force-blue;
+    padding: 32px 16px;
+}
+
+.footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer__top li {
+    margin: 20px;
+}
+
+.footer__link {
+    color: $white-smoke;
+    text-decoration: none;
+    font-family: 'work-sans';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__title {
+    font-family: 'abril-fatface';
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    height: 130px;
+    line-height: 129.5px;
+}
+  
+.footer__title span {
+    color: $white-smoke;
+}

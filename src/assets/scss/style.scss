@@ -1,0 +1,152 @@
+@import "/src/assets/scss/var";
+@import "/src/assets/scss/fonts";
+@import "/src/assets/scss/components/header__burger";
+@import "/src/assets/scss/components/header";
+@import "/src/assets/scss/components/product";
+@import "/src/assets/scss/components/footer";
+
+
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.main-title {
+  font-family: 'abril-fatface';
+  font-size: 96px;
+  font-weight: 400;
+  text-align: center;
+  height: 130px;
+  line-height: 129.5px;
+}
+
+.main-title span {
+    color: $air-force-blue;
+}
+
+.h1-title {
+  font-family: 'abril-fatface';
+  font-size: 40px;
+  font-weight: 400;
+  height: 54px;
+  line-height: 53.96px;
+  color: $black;
+}
+
+.h1-title span {
+    color: $air-force-blue;
+}
+
+.h2-title {
+  font-family: 'abril-fatface';
+  font-size: 32px;
+  font-weight: 400;
+  height: 43px;
+  line-height: 43.17px;
+  color: $black;
+}
+
+.h3-title {
+    font-family: 'work-sans';
+    font-size: 24px;
+    font-weight: 400;
+    height: 28px;
+    line-height: 28.15px;
+    color: $black;
+}
+
+.link {
+  display: inline-block;
+  font-family: 'work-sans';
+  font-size: 20px;
+  font-weight: 400;
+  height: 23px;
+  line-height: 23.46px;
+  color: $black;
+}
+
+.link:active {
+  border-bottom: solid $sinopia 2px;
+  text-underline-offset: 2px;
+}
+
+.default-txt {
+  font-family: 'work-sans';
+  font-size: 16px;
+  font-weight: 400;
+  height: 19px;
+  line-height: 18.77px;
+  color: $black;
+}
+
+/* ARROW-RIGHT */
+.arrow-right-container {
+    color: $white;
+    background-color: $air-force-blue;
+    border-radius: 4px;
+    border: none;
+    width: 44px;
+    height: 44px;
+}
+
+.arrow-right {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.arrow-right-container:hover {
+    background-color: $sinopia;
+}
+
+/* PAGINATION */
+.pagination {
+    font-family: 'work-sans';
+    font-size: 24px;
+    line-height: 28.15px;
+    font-weight: 700;
+    color: $white;
+    background-color: $air-force-blue;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    border: none;
+    width: 44px;
+    height: 44px;
+}
+
+.pagination:active {
+    background-color: $sinopia;
+}
+
+/* FORM FIELD */
+.field, .field::placeholder {
+    font-family: 'work-sans';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.46px;
+    height: 23px;
+    color: $air-force-blue;
+    padding: 16px;
+    background-color: $white-smoke;
+}
+
+/* BANNER */
+.banner {
+    font-family: 'abril-fatface';
+    background-color: $air-force-blue;
+    color: $white;
+    font-size: 40px;
+    line-height: 53.96px;
+    font-weight: 400;
+    width: 100%;
+    padding: 16px 32px;
+    text-align: center;
+}
+
+
+

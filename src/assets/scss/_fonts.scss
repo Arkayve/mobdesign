@@ -1,0 +1,24 @@
+/* FONTS */
+@font-face {
+    font-family: 'abril-fatface';
+    src: url(/src/assets/fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'work-sans';
+    src: url(/src/assets/fonts/Work_Sans/static/WorkSans-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'work-sans-italic';
+    src: url(/src/assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf);
+    font-style: italic;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'work-sans-bold';
+    src: url(/src/assets/fonts/Work_Sans/static/WorkSans-Bold.ttf);
+    font-style: normal;
+    font-weight: bold;
+}

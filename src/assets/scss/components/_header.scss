@@ -1,0 +1,72 @@
+/* HEADER */
+.header__container {
+    padding: 0px 16px;
+    background-image: url(/public/images/home.jpeg);
+    height: 328px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-left: -16px;
+    padding: 0 16px;
+    background-color: $white;
+}
+
+.header__topTitle {
+    font-family: 'abril-fatface';
+    font-size: 40px;
+    font-weight: 400;
+    height: 54px;
+    line-height: 53.96px;
+    color: $black;
+    z-index: 2;    
+}
+
+.header__topTitle span {
+    color: $air-force-blue;
+}
+
+.header__bottom {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+}
+
+.header__bottomTitle {
+    font-family: 'work-sans-italic';
+    font-style: italic;
+    text-align: right;
+    font-family: 'work-sans';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28.15px;
+    width: 250px;
+}
+
+.header--bold--orange {
+    font-family: 'work-sans-bold';
+    font-size: 32px;
+    font-style: normal;
+    color: $sinopia;
+    font-weight: 700;
+    line-height: 37.54px;
+}
+
+.header--bold--blue {
+    font-family: 'abril-fatface';
+    color: $air-force-blue;
+    font-weight: 400;
+    font-size: 32px;
+    font-style: normal;
+    line-height: 37.54px;
+}
