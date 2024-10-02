@@ -1,58 +1,65 @@
-.category {
-    &__section {
-      padding: 2rem;
-      background: linear-gradient(to right, $white-smoke 75%, transparent 75%);
-      margin: 2rem 0;
+/* CATEGORIES */
+.categories {
+    &__background {
+        padding: 2rem;
+        background: linear-gradient(to right, $white-smoke 75%, transparent 75%);
+        margin: 2rem 0;
   
-      > h3 {
-        color: $sinopia;
-        font-family: 'abril-fatface';
-        font-size: 2.5rem;
-        font-weight: 400;
-        line-height: 3.37rem;
-        height: 3.37rem;
-        text-align: center;
-      }
+        > h3 {
+            color: $sinopia;
+            font-family: 'abril-fatface';
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 3.37rem;
+            height: 3.37rem;
+            text-align: center;
+        }
   
-      > p {
-        color: $black;
-        font-family: 'work-sans';
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.17rem;
-        height: 4.75rem;
-        margin-top: 1rem;
-      }
+        > p {
+            color: $black;
+            font-family: 'work-sans';
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.17rem;
+            height: 4.75rem;
+            margin-top: 1rem;
+        }
     }
-  
+}
+
+.category {
     &__container {
-      width: 9rem;
-      height: 11.44rem;
-      margin-bottom: 2.5rem;
+        width: 9rem;
+        height: 11.44rem;
+        margin-bottom: 2.5rem;
+  
+        h3 {
+            text-align: center;
+            margin-top: 1rem;
+        }
     }
   
     &__img {
-      width: 9rem;
-      height: 9rem;
+        width: 9rem;
+        height: 9rem;
     }
   
     &__title {
-      color: $black;
-      font-family: 'work-sans';
-      font-size: 1.25rem;
-      line-height: 1.47rem;
-      text-align: center;
-      margin-top: 1rem;
+        color: $black;
+        font-family: 'work-sans';
+        font-size: 1.25rem;
+        line-height: 1.47rem;
+        text-decoration: none;
     }
-  }
-  
-  .categories {
+}
+
+.categories {
     &__container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
-      align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+        justify-items: center;
     }
-  }
+}
   

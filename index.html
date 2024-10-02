@@ -1,55 +1,51 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/svg/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MobDesign</title>
-  </head>
-  <header class="header"> 
-    <div class="header__container">
-      <div id="header__top" class="header__top">
-        <h1 class="header__topTitle"><a href="#accueil">Mob<span>D</span>esign</a></h1>
-        <button id="header__burger" class="header__burger" aria-label="Ouvrir le menu"></button>
-        <nav id="header__menu" class="header__menu">
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#canapes">Canapés</a></li>
-            <li><a href="#decoration">Décoration</a></li>
-            <li><a href="#mes-coups-de-coeur">Mes coups de coeur</a></li>
-          </ul>
-        </nav>
-    </div>
-      <div class="header__bottom">
-          <h2 class="header__bottomTitle">Votre <span class="header--bold--orange">intérieur </span>réinventé avec <span class="header--bold--blue">style</span></h2>
-      </div>
-  </div>
-  </header>
-  <body>
-    <section class="category__section">
-      <h3>Notre collection</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <div id="categories__container" class="categories__container"></div>
-    </section>
-    <section id="banner" class="banner"></section>
-    <main id="main"></main>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-  <footer class="footer">
-      <nav>
-          <ul class="footer__top">
-            <li><a class="footer__link" href="#qui-sommes-nous">Qui sommes-nous ?</a></li>
-            <li><a class="footer__link" href="#mentions-legales">Mentions légales</a></li>
-            <li><a class="footer__link" href="#cgv">CGV</a></li>
-          </ul>
-      </nav>       
-      <div class="footer__bottom">
-          <h3 class="footer__title"><a href="#accueil">Mob<span>D</span>esign</a></h3>
-          <button class="footer__instagram" aria-label="Lien vers Instagram"></button>
-          <button class="footer__tiktok" aria-label="Lien vers Tiktok"></button>
-          <button class="footer__mastodon" aria-label="Lien vers Mastodon"></button>        
-      </div>
-  </footer>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/public/svg/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MobDesign</title>
+    </head>
+    <header class="header"> 
+        <div class="header__container">
+            <div id="header__top" class="header__top">
+                <h1 class="header__topTitle"><a href="#accueil">Mob<span>D</span>esign</a></h1>
+                <button id="header__burger" class="header__burger" aria-label="Ouvrir le menu"></button>
+                <nav id="header__menu" class="header__menu">
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#canapes-et-fauteuils">Canapés et fauteuils</a></li>
+                        <li><a href="#decoration">Décoration</a></li>
+                        <li><a href="#mes-coups-de-coeur">Mes coups de coeur</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__bottom">
+                <h2 class="header__bottomTitle">Votre <span class="header--bold--orange">intérieur </span>réinventé avec <span class="header--bold--blue">style</span></h2>
+            </div>
+        </div>
+    </header>
+    <body>
+        <section id="categories__section" class="categories__section"></section>
+        <section id="banner" class="banner"></section>
+        <main id="main"></main>
+        <footer class="footer">
+            <nav>
+                <ul class="footer__top">
+                    <li><a class="footer__link" href="#qui-sommes-nous">Qui sommes-nous ?</a></li>
+                    <li><a class="footer__link" href="#mentions-legales">Mentions légales</a></li>
+                    <li><a class="footer__link" href="#cgv">CGV</a></li>
+                </ul>
+            </nav>       
+            <div class="footer__bottom">
+                <h3 class="footer__title"><a href="#accueil">Mob<span>D</span>esign</a></h3>
+                <button class="footer__instagram" aria-label="Lien vers Instagram"></button>
+                <button class="footer__tiktok" aria-label="Lien vers Tiktok"></button>
+                <button class="footer__mastodon" aria-label="Lien vers Mastodon"></button>        
+            </div>
+        </footer>
+        <script type="module" src="/src/main.js"></script>
+    </body>
 </html>
 
 <!-- PRODUCT TEMPLATE -->
@@ -72,22 +68,22 @@
 
 <!-- CGV TEMPLATE -->
 <template id="cgvTemplate">
-  <div class="cgv__container">
-    <h3 class="cgv__title js-cgv__title1"></h3>
-    <p class="cgv__description js-cgv__description1"></p>
-    <h3 class="cgv__title js-cgv__title2"></h3>
-    <p class="cgv__description js-cgv__description2"></p>
-  </div>
-  <section class="banner js-banner"></section>
-  <div class="cgv__container">
-    <p class="cgv__description js-cgv__description3"></p>
-  </div>
+    <div class="cgv__container">
+        <h3 class="cgv__title js-cgv__title1"></h3>
+        <p class="cgv__description js-cgv__description1"></p>
+        <h3 class="cgv__title js-cgv__title2"></h3>
+        <p class="cgv__description js-cgv__description2"></p>
+    </div>
+    <section class="banner js-banner"></section>
+    <div class="cgv__container">
+        <p class="cgv__description js-cgv__description3"></p>
+    </div>
 </template>
 
 <!-- CATEGORY TEMPLATE -->
- <template id="categoryTemplate">
+<template id="categoryTemplate">
     <div class="category__container">
-      <img class="category__img js-category__img">
-      <h3 class="category__title js-category__title"></h3>
+        <img class="category__img js-category__img">
+        <h3><a class="category__title js-category__title"></a></h3>
     </div>
- </template>
+</template>

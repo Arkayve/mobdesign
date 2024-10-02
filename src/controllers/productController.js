@@ -1,9 +1,10 @@
-import { fetchProducts } from '../models/productModel.js';
-import { renderProducts } from '../view/productView.js';
-import { renderCategory } from '../view/categoryView.js';
+import { renderCategory } from "/src/view/categoryView"
+import { renderProducts } from "/src/view/productView";
+import { getProductsFromStorageOrServer } from "/src/models/productModel"
 
-export async function loadProducts() {
-  const products = await fetchProducts();
-  renderCategory(products);
-  renderProducts(products);
+// Main display management
+export async function fetchAllProducts() {
+    const products = await getProductsFromStorageOrServer();
+    renderCategory(products)
+    renderProducts(products, true)
 }

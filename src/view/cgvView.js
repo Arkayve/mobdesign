@@ -1,3 +1,4 @@
+// Display of cgv
 export function renderCgv() {
     const cgvTemplate = document.getElementById('cgvTemplate')
     const cgvContainer = document.importNode(cgvTemplate.content, true)

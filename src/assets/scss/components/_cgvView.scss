@@ -1,22 +1,22 @@
-// CGV VIEW
+/* CGV VIEW */
 .cgv {
     &__container {
-      padding: 2.0rem 1.0rem;
+        padding: 2.0rem 1.0rem;
     }
   
     &__title {
-      font-family: 'work-sans';
-      font-size: 1.5rem;
-      line-height: 1.76rem;
-      color: $black;
-      margin: 1.25rem 0;
+        font-family: 'work-sans';
+        font-size: 1.5rem;
+        line-height: 1.76rem;
+        color: $black;
+        margin: 1.25rem 0;
     }
   
     &__description {
-      font-family: 'work-sans';
-      font-size: 1.0rem;
-      line-height: 1.17rem;
-      color: $black;
-      margin: 1.25rem 0;
+        font-family: 'work-sans';
+        font-size: 1.0rem;
+        line-height: 1.17rem;
+        color: $black;
+        margin: 1.25rem 0;
     }
 }

@@ -1,43 +1,44 @@
-export async function fetchProducts() {
+// Function to check localStorage or fetch the data
+export async function getProductsFromStorageOrServer() {
     const localData = localStorage.getItem('productsData');
     const localLastModified = localStorage.getItem('productsLastModified');
 
-    // Si des données sont présentes dans le localStorage
+    // If data is present in localStorage
     if (localData && localLastModified) {
         try {
-            // Faire une requête HEAD pour obtenir uniquement les en-têtes sans télécharger tout le fichier JSON
-            const headResponse = await fetch('/assets/data/products.json', { method: 'HEAD' });
+            // Make a HEAD request to check the headers without downloading the entire JSON file
+            const headResponse = await fetch('/src/assets/data/products.json', { method: 'HEAD' });
             const lastModified = headResponse.headers.get('Last-Modified');
 
-            // Si la date "Last-Modified" du fichier distant est plus récente, on met à jour les données
+            // If the 'Last-Modified' date of the remote file is more recent, update the data
             if (lastModified && new Date(lastModified) > new Date(localLastModified)) {
                 console.log('Le fichier JSON a été modifié. Réimportation des nouvelles données...');
                 return await importNewData(lastModified);
             } else {
                 console.log('Les données locales sont à jour. Utilisation du localStorage.');
-                return JSON.parse(localData); // Retourne les données du localStorage
+                return JSON.parse(localData); // Return the data from localStorage
             }
         } catch (error) {
             console.error('Erreur lors de la vérification du fichier distant :', error);
-            return JSON.parse(localData); // En cas d'erreur, on utilise les données du localStorage
+            return JSON.parse(localData); // In case of an error, use the data from localStorage
         }
     } else {
-        // Si aucune donnée locale n'est présente, on télécharge les données du serveur
+        // If no local data is present, fetch the data from the server
         console.log('Aucune donnée dans le localStorage. Téléchargement des données depuis le serveur...');
         return await importNewData();
     }
 }
 
-// Fonction pour télécharger et stocker les nouvelles données
+// Function to fetch and store the new data
 async function importNewData(lastModified = null) {
     try {
-        const response = await fetch('/assets/data/products.json');
+        const response = await fetch('/src/assets/data/products.json');
         const products = await response.json();
-        
-        // Mettre à jour le localStorage avec les nouvelles données
+
+        // Update localStorage with the new data
         localStorage.setItem('productsData', JSON.stringify(products));
 
-        // Mettre à jour la date de dernière modification dans le localStorage
+        // Update the last modified date in localStorage
         if (!lastModified) {
             lastModified = response.headers.get('Last-Modified');
         }
