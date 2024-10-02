@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+
+}
+@media (min-width: 1024px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1440px) {
+    .header__burger {
+        display: none;
+    }
+    .header__menu {
+        display: flex;
+    }
+}

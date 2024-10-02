@@ -4,52 +4,57 @@
     content: url('data:image/svg+xml,<svg class="header__burger" width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ouvrir le menu"><path d="M0 0H32V3H0V0Z" fill="black"/><path d="M0 11H32V14H0V11Z" fill="black"/><path d="M0 22H32V25H0V22Z" fill="black"/></svg>');
 }
 
-/* Style pour le bouton burger */
-.header__burger {
-    height: 24px;
-    cursor: pointer;
-    border: none;
-    background: none;
-    z-index: 2;
-}
-  
-/* Menu caché par défaut */
-.header__menu {
-    position: fixed;
-    top: -100%;
-    width: 100%;
-    background-color: $white;
-    transition: top 0.5s ease-in-out;
-    z-index: 1;
-    text-align: center;
-    margin-left: -16px;
-    border-bottom: solid $sinopia 5px;
-    font-family: 'work-sans';
-    font-size: 20px;
-    line-height: 23.46px;
-}
-  
-.header__menu ul {
-    list-style: none;
-    padding: 30px 20px;
-    margin-top: 30px;
-}
-  
-.header__menu ul li {
-    margin: 30px 0;
-}
-  
-.header__menu ul li a {
-    color: $black;
-    text-decoration: none;
-    font-size: 18px;
+.open.header__burger:after {
+    content: url('data:image/svg+xml,<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.12132 0L26.8701 24.7487L24.7487 26.8701L0 2.12132L2.12132 0Z" fill="black"/><path d="M3.03984e-06 24.7487L24.7487 5.96046e-07L26.8701 2.12132L2.12132 26.8701L3.03984e-06 24.7487Z" fill="black"/></svg>');
 }
 
-.header__menu ul li a:active {
-    border-bottom: solid $sinopia 2px;
-}
+/* Style pour le bouton burger */
+.header {
+    &__burger {
+      height: 1.5rem;
+      cursor: pointer;
+      border: none;
+      background: none;
+      z-index: 2;
+    }
   
-/* Menu ouvert */
-.header__menu.open {
-    top: 0;
+    /* Menu caché par défaut */
+    &__menu {
+      position: fixed;
+      top: -100%;
+      width: 100%;
+      background-color: $white;
+      transition: top 0.5s ease-in-out;
+      z-index: 1;
+      text-align: center;
+      margin-left: -1.0rem;
+      border-bottom: solid $sinopia 0.31rem;
+      font-family: 'work-sans';
+      font-size: 1.25rem;
+      line-height: 1.47rem;
+  
+      ul {
+        list-style: none;
+        padding: 1.88rem 1.25rem;
+        margin-top: 1.88rem;
+  
+        li {
+          margin: 1.88rem 0;
+  
+          a {
+            color: $black;
+            text-decoration: none;
+            font-size: 1.12rem;
+  
+            &:active {
+              border-bottom: solid $sinopia 0.12rem;
+            }
+          }
+        }
+      }
+  
+      &.open {
+        top: 0;
+      }
+    }
 }

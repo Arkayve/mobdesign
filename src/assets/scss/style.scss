@@ -7,123 +7,124 @@
 @import "/src/assets/scss/components/cgvView";
 @import "/src/assets/scss/utils";
 @import "/src/assets/scss/components/banner";
+@import "/src/assets/scss/responsive";
+@import "/src/assets/scss/components/category";
 
 .main-title {
-  font-family: 'abril-fatface';
-  font-size: 96px;
-  font-weight: 400;
-  text-align: center;
-  height: 130px;
-  line-height: 129.5px;
-}
-
-.main-title span {
-    color: $air-force-blue;
-}
-
-.h1-title {
-  font-family: 'abril-fatface';
-  font-size: 40px;
-  font-weight: 400;
-  height: 54px;
-  line-height: 53.96px;
-  color: $black;
-}
-
-.h1-title span {
-    color: $air-force-blue;
-}
-
-.h2-title {
-  font-family: 'abril-fatface';
-  font-size: 32px;
-  font-weight: 400;
-  height: 43px;
-  line-height: 43.17px;
-  color: $black;
-}
-
-.h3-title {
-    font-family: 'work-sans';
-    font-size: 24px;
+    font-family: 'abril-fatface';
+    font-size: 6.0rem;
     font-weight: 400;
-    height: 28px;
-    line-height: 28.15px;
+    text-align: center;
+    height: 8.12rem;
+    line-height: 8.09rem;
+  
+    span {
+      color: $air-force-blue;
+    }
+  }
+  
+  .h1-title {
+    font-family: 'abril-fatface';
+    font-size: 2.5rem;
+    font-weight: 400;
+    height: 3.38rem;
+    line-height: 3.37rem;
     color: $black;
-}
-
-.link {
-  display: inline-block;
-  font-family: 'work-sans';
-  font-size: 20px;
-  font-weight: 400;
-  height: 23px;
-  line-height: 23.46px;
-  color: $black;
-}
-
-.link:active {
-  border-bottom: solid $sinopia 2px;
-  text-underline-offset: 2px;
-}
-
-.default-txt {
-  font-family: 'work-sans';
-  font-size: 16px;
-  font-weight: 400;
-  height: 19px;
-  line-height: 18.77px;
-  color: $black;
-}
-
-/* ARROW-RIGHT */
-.arrow-right-container {
+  
+    span {
+      color: $air-force-blue;
+    }
+  }
+  
+  .h2-title {
+    font-family: 'abril-fatface';
+    font-size: 2.0rem;
+    font-weight: 400;
+    height: 2.69rem;
+    line-height: 2.7rem;
+    color: $black;
+  }
+  
+  .h3-title {
+    font-family: 'work-sans';
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 1.75rem;
+    line-height: 1.76rem;
+    color: $black;
+  }
+  
+  .link {
+    display: inline-block;
+    font-family: 'work-sans';
+    font-size: 1.25rem;
+    font-weight: 400;
+    height: 1.44rem;
+    line-height: 1.47rem;
+    color: $black;
+  
+    &:active {
+      border-bottom: solid $sinopia 0.12rem;
+      text-underline-offset: 0.12rem;
+    }
+  }
+  
+  .default-txt {
+    font-family: 'work-sans';
+    font-size: 1.0rem;
+    font-weight: 400;
+    height: 1.19rem;
+    line-height: 1.17rem;
+    color: $black;
+  }
+  
+  /* ARROW-RIGHT */
+  .arrow-right-container {
     color: $white;
     background-color: $air-force-blue;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     border: none;
-    width: 44px;
-    height: 44px;
-}
-
-.arrow-right {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-}
-
-.arrow-right-container:hover {
-    background-color: $sinopia;
-}
-
-/* PAGINATION */
-.pagination {
+    width: 2.75rem;
+    height: 2.75rem;
+  
+    &:hover {
+      background-color: $sinopia;
+    }
+  
+    .arrow-right {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+    }
+  }
+  
+  /* PAGINATION */
+  .pagination {
     font-family: 'work-sans';
-    font-size: 24px;
-    line-height: 28.15px;
+    font-size: 1.5rem;
+    line-height: 1.76rem;
     font-weight: 700;
     color: $white;
     background-color: $air-force-blue;
-    width: 44px;
-    height: 44px;
-    border-radius: 4px;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.25rem;
     border: none;
-    width: 44px;
-    height: 44px;
-}
-
-.pagination:active {
-    background-color: $sinopia;
-}
-
-/* FORM FIELD */
-.field, .field::placeholder {
+  
+    &:active {
+      background-color: $sinopia;
+    }
+  }
+  
+  /* FORM FIELD */
+  .field, .field::placeholder {
     font-family: 'work-sans';
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 23.46px;
-    height: 23px;
+    line-height: 1.47rem;
+    height: 1.44rem;
     color: $air-force-blue;
-    padding: 16px;
+    padding: 1.0rem;
     background-color: $white-smoke;
-}
+  }
+  

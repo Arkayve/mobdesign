@@ -6,7 +6,7 @@ export async function fetchProducts() {
     if (localData && localLastModified) {
         try {
             // Faire une requête HEAD pour obtenir uniquement les en-têtes sans télécharger tout le fichier JSON
-            const headResponse = await fetch('/public/data/products.json', { method: 'HEAD' });
+            const headResponse = await fetch('/assets/data/products.json', { method: 'HEAD' });
             const lastModified = headResponse.headers.get('Last-Modified');
 
             // Si la date "Last-Modified" du fichier distant est plus récente, on met à jour les données
@@ -31,7 +31,7 @@ export async function fetchProducts() {
 // Fonction pour télécharger et stocker les nouvelles données
 async function importNewData(lastModified = null) {
     try {
-        const response = await fetch('/public/data/products.json');
+        const response = await fetch('/assets/data/products.json');
         const products = await response.json();
         
         // Mettre à jour le localStorage avec les nouvelles données

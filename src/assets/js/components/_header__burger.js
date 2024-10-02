@@ -4,7 +4,7 @@ export function manageBurger() {
 
     // Ajouter ou retirer la classe "open" sur le clic du bouton burger
     header__burger.addEventListener('click', () => {
-    header__burger.classList.toggle('open');  // Animation du burger en croix
-    header__menu.classList.toggle('open');    // Afficher/masquer le menu
+        header__burger.classList.toggle('open');  // Animation du burger en croix
+        header__menu.classList.toggle('open');    // Afficher/masquer le menu
     });
 }
