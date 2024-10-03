@@ -13,13 +13,13 @@ export function makeBannerTransparent() {
 
 // Function to update the banner
 export function updateBanner(title, narrow = false) {
-    const banner = document.getElementById('banner');
-    banner.innerHTML = title;
+    const banner = document.getElementById('banner')
+    banner.innerHTML = title
     
     // Handle the "narrow" class based on the boolean variable
     if (narrow) {
-        banner.classList.add('narrow');
+        banner.classList.add('narrow')
     } else {
-        banner.classList.remove('narrow');
+        banner.classList.remove('narrow')
     }
 }
