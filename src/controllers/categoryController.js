@@ -7,5 +7,6 @@ export async function fetchProductsByCategory(category) {
     if (category) {
         products = products.filter(product => product.category === category);
     }
+    // We list all products of the category, so boolean is false
     renderProducts(products, false)
 }
