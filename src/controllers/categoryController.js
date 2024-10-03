@@ -8,5 +8,5 @@ export async function fetchProductsByCategory(category) {
         products = products.filter(product => product.category === category)
     }
     // We list all products of the category, so boolean is false
-    renderProducts(products, false)
+    renderProducts(products, false, false)
 }

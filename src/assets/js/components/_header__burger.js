@@ -2,6 +2,7 @@ export function manageBurger() {
     const header__burger = document.getElementById('header__burger')
     const header__menu = document.getElementById('header__menu')
     const headerLinks = document.querySelectorAll('#header__menu a')
+    const searchForm = document.getElementById('search__container')
 
     // Add or remove the 'open' class on burger button click
     header__burger.addEventListener('click', () => {
@@ -24,4 +25,12 @@ export function manageBurger() {
             header__menu.classList.remove('open')    // Close the menu
         }
     })
+
+    // Close the menu when submitting a search query
+    if (searchForm) {
+        searchForm.addEventListener('submit', () => {
+            header__burger.classList.remove('open')  // Reset the burger icon
+            header__menu.classList.remove('open')    // Close the menu
+        })
+    }
 }

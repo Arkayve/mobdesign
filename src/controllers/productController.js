@@ -8,6 +8,6 @@ export async function fetchAllProducts() {
     const products = await getProductsFromStorageOrServer()
     renderCategory(products)
     // Boolean precise if we want only fourth's more recents products. Home display need to be on true
-    renderProducts(products, true)
+    renderProducts(products, true, false)
     carouselNavigation()
 }

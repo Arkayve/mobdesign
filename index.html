@@ -13,6 +13,12 @@
                 <button id="header__burger" class="header__burger" aria-label="Ouvrir le menu"></button>
                 <nav id="header__menu" class="header__menu">
                     <ul>
+                        <li>
+                            <form action="/search" method="GET" id="search__container" class="search__container">
+                                <input type="text" id="search__field" class="search__field" placeholder="Chercher..." aria-label="Recherche" name="query"/>
+                                <button type="submit" id="search__btn" class="search__btn"></button>
+                            </form>
+                        </li>
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#canapes-et-fauteuils">Canapés et fauteuils</a></li>
                         <li><a href="#decoration">Décoration</a></li>

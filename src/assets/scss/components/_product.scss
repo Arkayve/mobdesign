@@ -57,3 +57,13 @@
         }
     }
 }
+
+// To see the number of articles matching the search
+.search__sentence {
+    font-family: 'work-sans';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.17rem;
+    color: $black;
+    padding: 1rem 3rem;
+}
