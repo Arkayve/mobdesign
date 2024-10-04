@@ -10,57 +10,75 @@ export function carouselNavigation() {
     let startX = 0;
     let endX = 0;
 
+    // Function to initialize or disable the carousel based on screen size
+    function initCarousel() {
+        const isLargeScreen = window.innerWidth >= 1024;
+
+        if (isLargeScreen) {
+            // Disable the carousel for large screens
+            categoriesContainer.style.overflow = 'visible';
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+            categoriesContainer.removeEventListener('scroll', updateButtons);
+        } else {
+            // Enable the carousel for small screens
+            categoriesContainer.style.overflow = 'hidden';
+            prevButton.style.display = 'block';
+            nextButton.style.display = 'block';
+            updateButtons();
+        }
+    }
+
     // Function to update the state of the "Previous" and "Next" buttons
     function updateButtons() {
         // If we're at the very beginning, hide the "Previous" button
         if (categoriesContainer.scrollLeft === 0) {
-            prevButton.style.visibility = 'hidden' // Hide the button, but preserve the space
+            prevButton.style.visibility = 'hidden'; // Hide the button, but preserve the space
         } else {
-            prevButton.style.visibility = 'visible' // Show the button
+            prevButton.style.visibility = 'visible'; // Show the button
         }
 
         // If we're at the very end, hide the "Next" button
         if (categoriesContainer.scrollLeft + categoriesContainer.clientWidth >= categoriesContainer.scrollWidth) {
-            nextButton.style.visibility = 'hidden' // Hide the button, but preserve the space
+            nextButton.style.visibility = 'hidden'; // Hide the button, but preserve the space
         } else {
-            nextButton.style.visibility = 'visible' // Show the button
+            nextButton.style.visibility = 'visible'; // Show the button
         }
     }
 
     // Trigger the button update on load
-    updateButtons()
+    initCarousel();
+
+    // Re-evaluate screen size when the window is resized
+    window.addEventListener('resize', initCarousel);
 
     // "Next" button to scroll to the right
     nextButton.addEventListener('click', () => {
-        categoriesContainer.scrollBy({ left: categoryWidth * 2, behavior: 'smooth' })
-        setTimeout(updateButtons, 300) // Update after the transition
-    })
+        categoriesContainer.scrollBy({ left: categoryWidth * 2, behavior: 'smooth' });
+        setTimeout(updateButtons, 300); // Update after the transition
+    });
 
     // "Previous" button to scroll to the left
     prevButton.addEventListener('click', () => {
-        categoriesContainer.scrollBy({ left: -categoryWidth * 2, behavior: 'smooth' })
-        setTimeout(updateButtons, 300) // Update after the transition
-    })
+        categoriesContainer.scrollBy({ left: -categoryWidth * 2, behavior: 'smooth' });
+        setTimeout(updateButtons, 300); // Update after the transition
+    });
 
     // Update buttons in case the user manually scrolls
-    categoriesContainer.addEventListener('scroll', updateButtons)
+    categoriesContainer.addEventListener('scroll', updateButtons);
 
-    // Touch start event to detect the initial position of the swipe
+    // Handle swipe gestures
     categoriesContainer.addEventListener('touchstart', (event) => {
         startX = event.touches[0].clientX;
     });
 
-    // Touch move event to detect the swipe direction
     categoriesContainer.addEventListener('touchmove', (event) => {
         endX = event.touches[0].clientX;
     });
 
-    // Touch end event to calculate swipe distance and perform the scroll
     categoriesContainer.addEventListener('touchend', () => {
         const swipeDistance = startX - endX;
-
-        // Threshold to detect if a swipe is significant enough (you can adjust this value)
-        const swipeThreshold = 50;
+        const swipeThreshold = 50; // Swipe threshold
 
         if (swipeDistance > swipeThreshold) {
             // Swipe to the left (next)
@@ -70,7 +88,6 @@ export function carouselNavigation() {
             categoriesContainer.scrollBy({ left: -categoryWidth * 2, behavior: 'smooth' });
         }
 
-        // Update the button states after the swipe
-        setTimeout(updateButtons, 300);
+        setTimeout(updateButtons, 300); // Update after the swipe
     });
 }

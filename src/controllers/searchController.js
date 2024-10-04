@@ -13,15 +13,18 @@ export async function fetchProductsWithSearch(search) {
         // Filter the products based on the search query
         products = products.filter(product => {
             // Check if the search query is found in the product name, description, or colors
-            const nameMatch = product.title.toLowerCase().includes(lowerCaseSearch)
-            const descriptionMatch = product.description.toLowerCase().includes(lowerCaseSearch)
+            const nameMatch = product.title.toLowerCase().includes(lowerCaseSearch);
+            const descriptionMatch = product.description.toLowerCase().includes(lowerCaseSearch);
             
             // Check if any color matches the search query ('colors' is an array)
-            const colorMatch = product.colors.some(color => color.toLowerCase().includes(lowerCaseSearch))
-            
-            // Return true if any of the fields match
-            return nameMatch || descriptionMatch || colorMatch
-        })
+            const colorMatch = product.colors.some(color => color.toLowerCase().includes(lowerCaseSearch));
+
+            // Check if the category matches the search query
+            const categoryMatch = product.category.toLowerCase().includes(lowerCaseSearch);
+
+            // Return true if any of the fields (name, description, color, or category) match
+            return nameMatch || descriptionMatch || colorMatch || categoryMatch;
+        });
     }
 
     emptyBloc('main')

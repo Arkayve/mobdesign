@@ -81,3 +81,30 @@
 .scrolled {
     background-color: $white;
 }
+
+/* RESPONSIVE */
+@media (min-width: 1440px) {
+    .header {
+        &__bottom {
+            padding: 0 15rem;
+        }
+    
+        &__bottomTitle {
+            font-size: 3rem;
+            width: 30rem;
+    
+            span {
+                font-size: 3rem;
+            }
+        }
+    
+        &__top {
+            padding: 0 18rem;
+        }
+    
+        &__container {
+            height: 53.31rem;
+            background-position-y: bottom;
+        }
+    }
+}

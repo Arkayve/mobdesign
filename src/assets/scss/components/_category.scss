@@ -89,3 +89,39 @@
         margin-bottom: 4rem;
     }
 }
+
+@media (min-width: 1024px) {
+    .categories {
+        &__background {
+            background: linear-gradient(to right, $white-smoke 80%, transparent 80%);
+            padding: 0 18.13rem;
+
+            > h3 {
+                text-align: left;
+            }
+        }
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(12.5rem, 1fr));
+            overflow: visible; /* Remove the scroll */
+        }
+
+        // Hide buttons on large screen
+        &__prev,
+        &__next {
+            display: none;
+        }
+    }
+
+    .category {
+        &__img {
+            width: 13rem;
+            height: 13rem;
+        }
+
+        &__container {
+            width: 13rem;
+            height: 13rem;
+        }
+    }
+}
